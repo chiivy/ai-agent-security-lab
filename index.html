@@ -3,121 +3,307 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechScope Daily</title>
+
+  <title>The Daily Brief Nigeria</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f5f5f5;
-      color: #222;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f7f7f7;
+      color: #1d1d1d;
     }
 
     header {
       background: #ffffff;
       border-bottom: 1px solid #ddd;
-      padding: 20px 8%;
+    }
+
+    .topbar {
+      background: #111;
+      color: #fff;
+      padding: 8px 7%;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+    }
+
+    .header-main {
+      padding: 25px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .logo {
-      font-size: 24px;
+      font-size: 34px;
       font-weight: bold;
+      letter-spacing: -1px;
+    }
+
+    .tagline {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #777;
+      margin-top: 5px;
+    }
+
+    .date {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: #777;
     }
 
     nav {
-      margin-top: 10px;
-      color: #666;
+      border-top: 1px solid #eee;
+      padding: 14px 7%;
+      font-family: Arial, sans-serif;
       font-size: 14px;
     }
 
+    nav a {
+      color: #222;
+      text-decoration: none;
+      margin-right: 25px;
+    }
+
     main {
-      max-width: 900px;
-      margin: 50px auto;
-      background: white;
-      padding: 45px;
+      max-width: 1100px;
+      margin: 35px auto;
+      padding: 0 25px;
+    }
+
+    .section-title {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-left: 4px solid #222;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      background: #fff;
+      padding: 35px;
+      border: 1px solid #e5e5e5;
     }
 
     .category {
-      color: #777;
-      font-size: 13px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
       text-transform: uppercase;
+      color: #777;
+      margin-bottom: 10px;
     }
 
     h1 {
       font-size: 42px;
-      line-height: 1.15;
-      margin: 15px 0;
+      line-height: 1.12;
+      margin: 0 0 15px;
     }
 
-    .date {
+    .summary {
+      font-size: 19px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .meta {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
       color: #888;
-      font-size: 14px;
-      margin-bottom: 30px;
+      margin-top: 20px;
     }
 
-    p {
-      font-size: 18px;
-      line-height: 1.7;
+    .stories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .story {
+      background: #fff;
+      padding: 22px;
+      border: 1px solid #e5e5e5;
+    }
+
+    .story h2 {
+      font-size: 21px;
+      line-height: 1.3;
+      margin: 8px 0;
+    }
+
+    .story p {
+      font-size: 15px;
+      line-height: 1.5;
+      color: #666;
     }
 
     footer {
+      margin-top: 60px;
+      background: #111;
+      color: #aaa;
       text-align: center;
       padding: 30px;
-      color: #888;
-      font-size: 13px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+    }
+
+    @media (max-width: 700px) {
+      .stories {
+        grid-template-columns: 1fr;
+      }
+
+      .header-main {
+        display: block;
+      }
+
+      .date {
+        margin-top: 15px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">TechScope Daily</div>
-  <nav>Technology &nbsp; Business &nbsp; Digital Trends &nbsp; Security</nav>
-</header>
-
-<main>
-
-  <div class="category">Technology</div>
-
-  <h1>
-    Why More Businesses Are Moving Critical Services to the Cloud
-  </h1>
-
-  <div class="date">
-    October 5, 2026 · 5 min read
+  <div class="topbar">
+    LATEST NEWS &nbsp; | &nbsp; NIGERIA &nbsp; | &nbsp; BUSINESS &nbsp; | &nbsp; TECHNOLOGY
   </div>
 
-  <p>
-    Businesses across Africa are increasingly adopting cloud-based
-    services as organizations look for greater flexibility, scalability,
-    and resilience.
-  </p>
+  <header>
 
-  <p>
-    Cloud platforms allow companies to deploy applications more quickly
-    while reducing the need to maintain large amounts of physical
-    infrastructure. For many organizations, this has also changed how
-    technology and security teams manage their environments.
-  </p>
+    <div class="header-main">
 
-  <p>
-    Security remains an important consideration as organizations move
-    applications and data into cloud environments. Identity management,
-    network controls, monitoring, and appropriate access policies all
-    play an important role in protecting modern infrastructure.
-  </p>
+      <div>
+        <div class="logo">The Daily Brief</div>
+        <div class="tagline">
+          News, Business &amp; Stories from Nigeria and Beyond
+        </div>
+      </div>
 
-  <p>
-    Analysts expect cloud adoption to continue growing as organizations
-    invest in digital services and remote collaboration.
-  </p>
+      <div class="date">
+        Monday, October 5, 2026
+      </div>
 
-</main>
+    </div>
 
-<footer>
-  © 2026 TechScope Daily · Technology & Digital Trends
-</footer>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Nigeria</a>
+      <a href="#">Business</a>
+      <a href="#">Politics</a>
+      <a href="#">Technology</a>
+      <a href="#">Lifestyle</a>
+      <a href="#">World</a>
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <div class="section-title">
+      Top Story
+    </div>
+
+    <article class="lead">
+
+      <div class="category">
+        Business
+      </div>
+
+      <h1>
+        Lagos Businesses Adapt to Changing Consumer Habits
+      </h1>
+
+      <div class="summary">
+        Businesses across Lagos are adapting to changing consumer
+        habits as more customers turn to digital payments, online
+        services and mobile platforms for everyday transactions.
+      </div>
+
+      <div class="meta">
+        By Daily Brief Staff &nbsp; · &nbsp; October 5, 2026
+      </div>
+
+    </article>
+
+
+    <div class="stories">
+
+      <article class="story">
+
+        <div class="category">
+          Technology
+        </div>
+
+        <h2>
+          Nigerian Startups Increase Investment in Digital Services
+        </h2>
+
+        <p>
+          Technology companies are expanding their digital offerings
+          as demand for online services continues to grow across
+          major Nigerian cities.
+        </p>
+
+      </article>
+
+
+      <article class="story">
+
+        <div class="category">
+          Lifestyle
+        </div>
+
+        <h2>
+          How Young Professionals Are Changing the Way They Work
+        </h2>
+
+        <p>
+          Flexible working arrangements and digital collaboration
+          tools are becoming increasingly common among professionals
+          in Nigeria.
+        </p>
+
+      </article>
+
+
+      <article class="story">
+
+        <div class="category">
+          Business
+        </div>
+
+        <h2>
+          Small Businesses Look to Technology for Growth
+        </h2>
+
+        <p>
+          Entrepreneurs are increasingly turning to digital tools
+          to manage customers, payments and day-to-day operations.
+        </p>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+    © 2026 The Daily Brief Nigeria. All rights reserved.
+  </footer>
 
 </body>
 </html>
